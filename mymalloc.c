@@ -16,6 +16,12 @@ typedef struct Node{
 
 static Node* base = (Node*) memory;
 
+void init(){
+    base->isFree = true;
+    base->size = MEMLENGTH - sizeof(Node);
+    base->next = NULL;
+}
+
 void* mymalloc(size_t size, char* file, int line){
     if (base->size == 0)
         init();
@@ -51,10 +57,4 @@ void myfree(void* ptr, char* file, int line){
         return;
     }
     n->isFree = true;
-}
-
-void init(){
-    base->isFree = true;
-    base->size = MEMLENGTH - sizeof(Node);
-    base->next = NULL;
 }
