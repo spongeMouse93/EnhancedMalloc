@@ -1,4 +1,4 @@
-# Abdul Raheem (ar1712) and Siddharth Sircar (ss3777)
+# Abdul Raheem and Siddharth Sircar 
 
 This project provides an enhanced version of malloc and free from the stdlib library of C. Before allocating or freeing memory, the program first checks for erros and reports them to the console.
 
